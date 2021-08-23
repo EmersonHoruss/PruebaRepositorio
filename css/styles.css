@@ -1,0 +1,110 @@
+/* DECLARING GLOBAL CSS'S VARIABLES */
+:root{
+  --side-size: 15vw;
+  --footer-size: 5vh;
+}
+
+/* RESETING DEFAULT WEB PAGE'S VALUES */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: content-box;
+}
+
+/* COMPONENTS' FIRST STYLES */
+/* COMPUTER LAYOUT */
+body {
+  background-color: red;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: var(--side-size) auto var(--side-size);
+  grid-template-rows: auto var(--footer-size);
+  grid-template-areas: "left-list current-game announcements"
+  "footer footer footer";
+}
+
+.left-list {
+  grid-area: left-list;
+  background-color: blue;
+  /* width: 100px; */
+  /* height: 100px; */
+}
+
+.current-game {
+  grid-area: current-game;
+  background-color: teal;
+  /* width: 100px; */
+  /* height: 100px; */
+}
+
+.announcements {
+  grid-area: announcements;
+  background-color: yellow;
+  /* width: 100px; */
+  /* height: 100px; */
+}
+
+.footer{
+  grid-area: footer;
+  background-color: lightcoral;
+}
+
+/* CURRENT-GAME */
+.current-game .content{
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: 100%;
+}
+
+.current-game .content h1{
+  color:khaki;
+  text-align: center;
+  margin: 3%;
+  font-size: 2rem;
+}
+
+.current-game .canvas{
+  background-color: white;
+  width: 100%;
+  height: 80%;
+}
+
+.current-game .canvas .outGame{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkblue;
+}
+
+.current-game .canvas .outGame .start{
+  background-color: black;
+  border-radius: 25px;
+  width: 30%;
+  height: 20%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.current-game .canvas .inGame{
+  width: 100%;
+  height: 100%;
+  background-color: cadetblue;
+}
+
+/* GAME-LIST */
+
+
+
+
+/* EXTRA FUNCTIONALITY */
+.invisible{
+  display: none;
+}
